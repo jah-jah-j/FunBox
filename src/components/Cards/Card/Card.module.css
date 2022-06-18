@@ -1,0 +1,210 @@
+.card {
+  min-height: 480rem;
+  width: 320rem;
+  position: relative;
+  z-index: 1;
+  -webkit-border-radius: 12rem;
+  -moz-border-radius: 12rem;
+  border-radius: 12rem;
+  font-size: 16rem;
+  margin-bottom: 30rem;
+}
+
+.card:before {
+  position: absolute;
+  content: "";
+  display: block;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  border-radius: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
+
+.cardDefault, .cardSelected {
+  color: #000;
+}
+
+.cardDisabled, .cardDisabled .cardWrapper {
+  cursor: not-allowed;
+}
+
+.cardDefault:before {
+  background: linear-gradient(135deg, transparent 32rem, #1698d9 0), 0 0, no-repeat;
+}
+
+.cardSelected:before {
+  background: linear-gradient(135deg, transparent 32rem, #d91667 0), 0 0, no-repeat;
+}
+
+.cardDisabled:before {
+  background: linear-gradient(135deg, transparent 32rem, #b3b3b3 0), 0 0, no-repeat;
+}
+
+.cardWrapper {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+  height: calc(100% - 8rem);
+  width: calc(100% - 8rem);
+  background: linear-gradient(135deg, transparent 30rem, #f2f2f2 0), 0 0, no-repeat;
+  border-radius: 9rem;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: -1;
+  padding: 20rem 10rem 10rem 47rem;
+}
+
+.cardPhoto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.cardDisabled .cardPhoto {
+  opacity: .5;
+}
+
+.cardPhoto img {
+  position: absolute;
+  bottom: -92rem;
+  left: -24rem;
+  width: auto;
+  max-width: 120%;
+}
+
+.cardSubtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16rem;
+  line-height: 19rem;
+  margin-bottom: 5rem;
+  color: #666;
+}
+
+.cardDefault .cardSubtitle {
+  color: #666;
+}
+
+.cardSelected .cardSubtitleHover {
+  color: #d91667;
+  animation: opacity .3s linear;
+}
+
+.cardDisabled .cardSubtitle {
+  color: #B3B3B3;
+}
+
+.cardTitle {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48rem;
+  line-height: 56rem;
+}
+
+.cardDisabled .cardTitle {
+  color: #B3B3B3;
+}
+
+.cardTaste {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24rem;
+  line-height: 28rem;
+  margin-bottom: 15rem;
+}
+
+.cardDisabled .cardTaste {
+  color: #B3B3B3;
+}
+
+.cardWeight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 16rem;
+  right: 16rem;
+  width: 80rem;
+  height: 80rem;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 22rem;
+  line-height: 22rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  color: #FFF;
+}
+
+.cardDefault .cardWeight {
+  background-color: #1698D9;
+}
+
+.cardSelected .cardWeight {
+  background-color: #d91667;
+  animation: colToPrimary .1s linear;
+}
+
+.cardDisabled .cardWeight {
+  background-color: #B3B3B3;
+}
+
+.cardWeight strong {
+  font-size: 42rem;
+  line-height: 22rem;
+  font-weight: 400;
+  margin-bottom: 5rem;
+}
+
+.cardDescription {
+  position: absolute;
+  bottom: -24rem;
+  left: 0;
+  width: 100%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13rem;
+  line-height: 15rem;
+  text-align: center;
+  color: #FFF;
+}
+
+.cardDefault .cardDescription {
+  color: #FFF;
+}
+
+.cardDisabled .cardDescription {
+  color: #FF6;
+}
+
+.cardDescription button {
+  color: #1698D9;
+}
+
+@keyframes colToPrimary {
+  0% {
+    background: #1698d9;
+  }
+  100% {
+    background: #d91667;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,21 @@
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 80rem;
+  row-gap: 20rem;
+}
+
+.cardsWrapper {
+  padding: 20rem 0;
+}
+
+.title {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 36rem;
+  line-height: 44rem;
+  font-weight: 100;
+  text-align: center;
+  color: #FFF;
+  margin-bottom: 24rem;
+}
