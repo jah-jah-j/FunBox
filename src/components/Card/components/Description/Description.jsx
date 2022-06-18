@@ -1,5 +1,5 @@
-import React from 'react';
-import style from '../Card.module.css';
+import React, {memo} from 'react';
+import style from '../../card.module.css';
 
 const Description = ({isSelected, isDisabled, description, taste, setActiveClass}) => {
 
@@ -22,4 +22,4 @@ const Description = ({isSelected, isDisabled, description, taste, setActiveClass
   )
 };
 
-export default Description;
+export default memo(Description);

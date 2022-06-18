@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 
 const Weight = ({weight, className}) => {
   if (weight === 0.5) {
@@ -12,4 +12,4 @@ const Weight = ({weight, className}) => {
   }
 };
 
-export default Weight;
+export default memo(Weight);

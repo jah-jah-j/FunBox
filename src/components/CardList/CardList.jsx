@@ -1,16 +1,16 @@
 import React from 'react';
-import Card from './Card/Card';
-import style from './Cards.module.css';
+import Card from '../Card/Card';
+import style from './cardList.module.css';
 
-const Cards = ({cards}) => {
+const CardList = ({cards}) => {
   return (
     <div className={style.cardsWrapper}>
       <h1 className={style.title}>Ты сегодня покормил кота?</h1>
       <div className={style.cards}>
-        {cards.map(card => <Card key={card.id} card={card}/>)}
+        {cards.map(card => <Card key={card.id} {...card}/>)}
       </div>
     </div>
   )
 };
 
-export default Cards;
+export default CardList;
